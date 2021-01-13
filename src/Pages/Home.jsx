@@ -1,9 +1,12 @@
 import React from "react";
+import Hero from "../Components/Hero";
 // import Container from "../Components/Container"
 
 function Home() {
   return (
     <div>
+      <Hero backgroundImage="https://www.universalhub.com/files/styles/main_image/public/images/2019/1970dotave.jpg?itok=hJZ1K0gF">    
+      </Hero>
       {/* <Container style={{ marginTop: 30 }}> */}
         {/* <Row>
           <Col size="md-12"> */}
