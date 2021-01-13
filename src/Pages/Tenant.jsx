@@ -12,7 +12,6 @@ function Tenant() {
             <Jumbotron> <h1>Welcome To Tenant!</h1> 
             <h2>My Rental</h2>
             <TenantCard />
-            </Jumbotron>
             <p>
               Etiam ut massa efficitur, gravida sapien non, condimentum sapien. Suspendisse massa
               tortor, facilisis in neque sit amet, scelerisque elementum tortor. Nullam eget nibh
@@ -27,6 +26,7 @@ function Tenant() {
               interdum elit pulvinar eu. Quisque vitae quam dapibus, vestibulum mauris quis, laoreet
               massa.
             </p>
+            </Jumbotron>
           {/* </Col>
         </Row> */}
       {/* </Container> */}
