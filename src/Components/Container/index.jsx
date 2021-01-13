@@ -5,7 +5,6 @@ function Container() {
     
     return(
         <div>
-            This is a Container!
             <Card />
         </div>
     )
