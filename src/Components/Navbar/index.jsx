@@ -1,39 +1,48 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./style.css";
 
-const { Navbar, NavDropdown, Nav, MenueItem } = ReactBootstrap;
-class TopNavbar extends React.Component {
-	render() {
-		return (
-			<div>
-				<Navbar collapseOnSelect expand="lg" className="top-nav">
-          <div className="container">
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" className="menu-list">
-            <Nav >
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="">Separated link</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-          </div>
-        </Navbar>
-			</div>
-			
-		);
-	}
+// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+function Navbar() {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to="/">
+        Pupster
+      </Link>
+      <div>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link
+              to="/"
+              className={
+                window.location.pathname === "/" || window.location.pathname === "/about"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              About
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/discover"
+              className={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
+            >
+              Discover
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/search"
+              className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
+            >
+              Search
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 }
-
-ReactDOM.render(
-	<TopNavbar />,
-	document.getElementById('root')
-);
-
 
 export default Navbar;

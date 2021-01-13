@@ -1,29 +1,3 @@
-
-.top-nav {
-    background: linear-gradient(to right, #e43a15, #e65245);
-}
-  
-    .nav-link {
-        color: white !important;
-        border-bottom: 4px solid white;
-    }
-    
-    .menu-list {
-    justify-content: flex-end;
-    }
-    
-    .navbar-brand{
-      float: left;
-    }
-  
-  
-  
-  
-  
-  .navbar .dropdown-menu a:hover {
-      color: #616161 !important;
+nav.navbar.navbar-default {
+    margin-bottom: 0;
   }
-  .darken-grey-text {
-      color: #2E2E2E;
-  }
-  
