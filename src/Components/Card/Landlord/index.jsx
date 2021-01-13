@@ -1,13 +1,12 @@
 import React from 'react';
 import Button from '../Button';
 
-function Card() {
+function LandlordCard() {
     return(
         <div>
-            This is a Card!
             <Button />
         </div>
     )
 }
 
-export default Card;
+export default LandlordCard;
