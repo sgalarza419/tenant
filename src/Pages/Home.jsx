@@ -4,14 +4,10 @@ import React from "react";
 function Home() {
   return (
     <div>
-      {/* <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-        <h1>Pupster</h1>
-        <h2>They're the Good Boys and Girls</h2>
-      </Hero> */}
       {/* <Container style={{ marginTop: 30 }}> */}
         {/* <Row>
           <Col size="md-12"> */}
-            <h1>Welcome To Paradise!</h1>
+            <h1>Welcome To Home!</h1>
           {/* </Col>
         </Row>
         <Row>
