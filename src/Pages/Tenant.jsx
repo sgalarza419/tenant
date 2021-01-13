@@ -1,5 +1,6 @@
 import React from "react";
 import TenantCard from "../Components/Card/Tenant"
+import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Container from "../Components/Container"
 
 function Tenant() {
@@ -8,13 +9,10 @@ function Tenant() {
       {/* <Container style={{ marginTop: 30 }}> */}
         {/* <Row>
           <Col size="md-12"> */}
-            <h1>Welcome To Tenant!</h1>
-          {/* </Col>
-        </Row>
-        <Row>
-          <Col size="md-12"> */}
+            <Jumbotron> <h1>Welcome To Tenant!</h1> 
             <h2>My Rental</h2>
             <TenantCard />
+            </Jumbotron>
             <p>
               Etiam ut massa efficitur, gravida sapien non, condimentum sapien. Suspendisse massa
               tortor, facilisis in neque sit amet, scelerisque elementum tortor. Nullam eget nibh
