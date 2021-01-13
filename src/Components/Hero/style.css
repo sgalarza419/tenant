@@ -1,7 +1,9 @@
 .hero {
+  background-color: #cccccc;
   height: 500px;
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 
@@ -22,7 +24,7 @@
   z-index: 2;
 }
 
-.hero h1, .hero h2 {
+/* .hero h1, .hero h2 {
   color: white;
 }
 
@@ -30,4 +32,4 @@
   font-size: 60px;
   padding-top: 140px;
   margin-top: 0;
-}
+} */
