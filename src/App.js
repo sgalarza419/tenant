@@ -5,13 +5,14 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Landlord from "./Pages/Landlord";
 import Tenant from "./Pages/Tenant";
+import Navbar from "./Components/Navbar"
 
 
 function App() {
   return (
     <Router>
     <div>
-    {/* <Navbar /> */}
+    <Navbar />
     <Route exact path={["/", "/home"]}>
       <Home />
     </Route>
@@ -24,6 +25,7 @@ function App() {
     {/* <Container /> */}
     </div>
     </Router>
+    
   );
 }
 
