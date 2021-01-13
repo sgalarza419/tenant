@@ -1,20 +1,22 @@
 import React from "react";
 import Hero from "../Components/Hero";
-// import Container from "../Components/Container"
+import Container from "../Components/Container"
+import Row from "../Components/Row";
+import Col from "../Components/Col";
 
 function Home() {
   return (
     <div>
-      <Hero backgroundImage="https://www.universalhub.com/files/styles/main_image/public/images/2019/1970dotave.jpg?itok=hJZ1K0gF">    
+      <Hero backgroundImage="https://wsptldr.files.wordpress.com/2020/07/2020_07kmartapart.jpg?w=1024">    
       </Hero>
-      {/* <Container style={{ marginTop: 30 }}> */}
-        {/* <Row>
-          <Col size="md-12"> */}
+      <Container style={{ marginTop: 30 }}>
+        <Row>
+          <Col size="md-12">
             <h1>Welcome To Home!</h1>
-          {/* </Col>
+          </Col>
         </Row>
         <Row>
-          <Col size="md-12"> */}
+          <Col size="md-12">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
               consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
@@ -50,9 +52,9 @@ function Home() {
               interdum elit pulvinar eu. Quisque vitae quam dapibus, vestibulum mauris quis, laoreet
               massa.
             </p>
-          {/* </Col>
-        </Row> */}
-      {/* </Container> */}
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
