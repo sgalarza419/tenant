@@ -1,19 +1,12 @@
 {
-  "homepage": "https://sgalarza419.github.com/tenant",
   "name": "tenant",
-  "version": "0.1.0",
-  "private": true,
-  "main": "server.js",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.8",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.0",
-    "bootstrap": "^4.5.3",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
-    "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^4.0.1",
     "web-vitals": "^0.2.4",
     "cookie-session": "^1.4.0",
     "ejs": "^3.1.5",
@@ -22,33 +15,19 @@
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgalarza419/tenant.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgalarza419/tenant/issues"
   },
-  "devDependencies": {
-    "gh-pages": "^3.1.0"
-  }
+  "homepage": "https://github.com/sgalarza419/tenant#readme"
 }
