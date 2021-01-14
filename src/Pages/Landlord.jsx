@@ -1,17 +1,25 @@
 import React from "react";
-// import Container from "../Components/Container"
+import Hero from "../Components/Hero";
+import Container from "../Components/Container"
+import Row from "../Components/Row";
+import Col from "../Components/Col";
+// import styled, { keyframes } from "animate.css";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
 
 function Landlord() {
   return (
     <div>
-      {/* <Container style={{ marginTop: 30 }}> */}
-        {/* <Row>
-          <Col size="md-12"> */}
-            <h1>Welcome To Landlord!</h1>
-          {/* </Col>
+       <Hero backgroundImage="https://wsptldr.files.wordpress.com/2020/07/2020_07kmartapart.jpg?w=1024">
+      </Hero>
+      <Container style={{ marginTop: 30 }}>
+        <Row>
+          <Col size="md-12">
+            <h1 className="text-center" style={{color: "teal", fontSize: "100px", }}>Welcome To Landlord!</h1>
+          </Col>
         </Row>
         <Row>
-          <Col size="md-12"> */}
+          <Col size="md-12">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
               consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
@@ -47,9 +55,9 @@ function Landlord() {
               interdum elit pulvinar eu. Quisque vitae quam dapibus, vestibulum mauris quis, laoreet
               massa.
             </p>
-          {/* </Col>
-        </Row> */}
-      {/* </Container> */}
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
