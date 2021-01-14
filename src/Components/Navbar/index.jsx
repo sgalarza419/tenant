@@ -9,7 +9,7 @@ function Navbar() {
       <Link className="navbar-brand" to="/">
        CDMS Connect
       </Link>
-      <div>
+      <div className="ml-auto">
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
