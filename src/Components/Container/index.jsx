@@ -1,13 +1,7 @@
-import React from 'react';
-import Card from '../Card';
+import React from "react";
 
-function Container() {
-    
-    return(
-        <div>
-            <Card />
-        </div>
-    )
+function Container(props) {
+  return <div className="container" style={props.style}>{props.children}</div>;
 }
 
 export default Container;

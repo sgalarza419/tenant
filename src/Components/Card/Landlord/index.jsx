@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 
-function Card() {
+function LandlordCard() {
     return(
         <div>
             <Button />
@@ -9,4 +9,4 @@ function Card() {
     )
 }
 
-export default Card;
+export default LandlordCard;
