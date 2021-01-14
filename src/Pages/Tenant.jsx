@@ -9,12 +9,14 @@ function Tenant() {
       {/* <Container style={{ marginTop: 30 }}> */}
         {/* <Row>
           <Col size="md-12"> */}
-            <Jumbotron> <h1>Welcome To Tenant!</h1> 
+            <Jumbotron> 
+            <h1>Welcome Tenant!</h1> 
             <h2>My Rental</h2>
+            </Jumbotron>
             <TenantCard />
             <p>
               Etiam ut massa efficitur, gravida sapien non, condimentum sapien. Suspendisse massa
-              tortor, facilisis in neque sit amet, scelerisque elementum tortor. Nullam eget nibh
+              tortor, facilisis in nque sit amet, scelerisque elementum tortor. Nullam eget nibh
               sit amet odio lobortis ullamcorper. Nulla bibendum magna nec sem pulvinar lobortis.
               Mauris et imperdiet urna, vitae lobortis dui. Nunc elementum elit mi, non mattis enim
               congue at. Proin mi lectus, ullamcorper id hendrerit eu, ultricies vitae lacus. Nunc
@@ -26,7 +28,6 @@ function Tenant() {
               interdum elit pulvinar eu. Quisque vitae quam dapibus, vestibulum mauris quis, laoreet
               massa.
             </p>
-            </Jumbotron>
           {/* </Col>
         </Row> */}
       {/* </Container> */}
