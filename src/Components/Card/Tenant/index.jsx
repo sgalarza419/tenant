@@ -1,14 +1,7 @@
 import React from 'react';
 import Button from '../../Button';
-<<<<<<< HEAD
-import "./style.css";
-
-  
-  
-=======
 import Card from 'react-bootstrap/Card'
 import Container from '../../Container'
->>>>>>> 0e38ac7342f4b884750dd733652767ba9cb4825e
 
 function TenantCard() {
     return (
