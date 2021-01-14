@@ -10,7 +10,7 @@ import Col from "../Components/Col";
 function Landlord() {
   return (
     <div>
-       <Hero backgroundImage="https://wsptldr.files.wordpress.com/2020/07/2020_07kmartapart.jpg?w=1024">
+       <Hero backgroundImage="https://static1.squarespace.com/static/58fa0759ebbd1a8dd14ebdf8/t/5cf58d68e15d7f0001b003f1/1559596404951/Landlord-bloglead.gif?format=1500w">
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
