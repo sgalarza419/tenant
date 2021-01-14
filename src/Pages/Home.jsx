@@ -3,6 +3,7 @@ import Hero from "../Components/Hero";
 import Container from "../Components/Container"
 import Row from "../Components/Row";
 import Col from "../Components/Col";
+import styled, { keyframes } from "animate.css";
 
 function Home() {
   return (
@@ -12,7 +13,16 @@ function Home() {
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Welcome To Home!</h1>
+            <div className="animate__animated animate__bounceInDown">
+            <h1 className="text-center" style={{color: "teal", fontSize: "100px"}}>CDMS CONNECT!!</h1>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <h2 className="text-center">What we do</h2>
+            <br/>
+            <br/>
+            <br/>
           </Col>
         </Row>
         <Row>
