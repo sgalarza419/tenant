@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-       Paradise
+       CDMS Connect
       </Link>
       <div>
         <ul className="navbar-nav">
