@@ -7,6 +7,10 @@ import Col from "react-bootstrap/Col";
 import styled, { keyframes } from "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
+import { faComments } from "@fortawesome/free-solid-svg-icons";
+import { faSms } from "@fortawesome/free-solid-svg-icons";
+import { faHandshake } from "@fortawesome/free-solid-svg-icons";
+import { faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
 // import Image from "react-bootstrap/Image";
 import "../Components/FlipCardHome/style.css";
 
@@ -33,7 +37,7 @@ function Home() {
           <div className="flip-card-inner">
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
-              <h5 style={{ marginTop: "15px" }}>Spice It Up!!</h5>
+              <h5 style={{ marginTop: "150px" }}><FontAwesomeIcon icon={faComments} size="5x" color="white"/></h5>
             </div>
             <div className="flip-card-back text-white">
               <br />
@@ -41,10 +45,7 @@ function Home() {
               <br />
               <h1>Spice It Up!!</h1>
               <p>Bored?? Having trouble coming up with something to do?? Check out the Spice It Up!! app where we randomly generate an activity for you to do based on the category you select!!</p>
-              <br/>
-              <br/>
-              <br/>
-              {/* <a rel="alternate, noreferrer" target="_blank" href="https://github.com/dspark8916/Project1Group2"><FontAwesomeIcon icon={} size="5x" color="white"/></a> */}
+              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
@@ -53,7 +54,7 @@ function Home() {
           <div className="flip-card-inner">
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
-              <h5 style={{ marginTop: "15px" }}>Spice It Up!!</h5>
+              <h5 style={{ marginTop: "150px" }}><FontAwesomeIcon icon={faHandshake} size="5x" color="white"/></h5>
             </div>
             <div className="flip-card-back text-white">
               <br />
@@ -61,10 +62,7 @@ function Home() {
               <br />
               <h1>Spice It Up!!</h1>
               <p>Bored?? Having trouble coming up with something to do?? Check out the Spice It Up!! app where we randomly generate an activity for you to do based on the category you select!!</p>
-              <br/>
-              <br/>
-              <br/>
-              {/* <a rel="alternate, noreferrer" target="_blank" href="https://github.com/dspark8916/Project1Group2"><FontAwesomeIcon icon={} size="5x" color="white"/></a> */}
+              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faHandshake} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
@@ -73,7 +71,7 @@ function Home() {
           <div className="flip-card-inner">
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
-              <h5 style={{ marginTop: "15px" }}>Spice It Up!!</h5>
+              <h5 style={{ marginTop: "150px" }}><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></h5>
             </div>
             <div className="flip-card-back text-white">
               <br />
@@ -81,10 +79,7 @@ function Home() {
               <br />
               <h1>Spice It Up!!</h1>
               <p>Bored?? Having trouble coming up with something to do?? Check out the Spice It Up!! app where we randomly generate an activity for you to do based on the category you select!!</p>
-              <br/>
-              <br/>
-              <br/>
-              {/* <a rel="alternate, noreferrer" target="_blank" href="https://github.com/dspark8916/Project1Group2"><FontAwesomeIcon icon={} size="5x" color="white"/></a> */}
+              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
