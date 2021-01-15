@@ -6,8 +6,10 @@ import Col from "../Components/Col";
 import styled, { keyframes } from "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
+// import Modal from "../Components/Modal";
 
 function Home() {
+
   return (
     <div>
       <Hero backgroundImage="https://wsptldr.files.wordpress.com/2020/07/2020_07kmartapart.jpg?w=1024">

@@ -40,6 +40,12 @@ function Navbar() {
             >
               Tenant
             </Link>
+            <Link
+              to="/login"
+              className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+            >
+              Login
+            </Link>
           </li>
         </ul>
       </div>
