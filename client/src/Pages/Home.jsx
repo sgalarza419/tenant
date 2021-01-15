@@ -7,12 +7,8 @@ import Col from "react-bootstrap/Col";
 import styled, { keyframes } from "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
-<<<<<<< HEAD
-// import Modal from "../Components/Modal";
-=======
 // import Image from "react-bootstrap/Image";
 import "../Components/FlipCardHome/style.css";
->>>>>>> c9f61f920a2a1fb4fe56cd4aaa2fc59a62d873d8
 
 function Home() {
 
