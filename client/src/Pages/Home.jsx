@@ -27,9 +27,7 @@ function Home() {
           </Col>
         </Row>
       </Container>
-      <Container>
         <Row>
-          <Col className="col-4">
           <div className="flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front text-white">
@@ -49,9 +47,7 @@ function Home() {
             </div>
           </div>
         </div>
-        </Col>
         </Row>
-        </Container>
     </div>
   );
 }
