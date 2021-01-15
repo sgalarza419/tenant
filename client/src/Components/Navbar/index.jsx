@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
@@ -22,7 +23,7 @@ function Navbar() {
                   : "nav-link"
               }
             >
-              Home
+             <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
             </Link>
           </li>
           <li className="nav-item">
@@ -40,6 +41,8 @@ function Navbar() {
             >
               Tenant
             </Link>
+          </li>
+          <li className="nav-item">
             <Link
               to="/login"
               className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
