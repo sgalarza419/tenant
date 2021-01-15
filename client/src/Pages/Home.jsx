@@ -88,7 +88,7 @@ function Home() {
               <br />
               <br />
               <h1>Sign Up</h1>
-              <p>Registering is a breeze!! Have your information handy and be up and running in no time!!</p>
+              <p>Registering is a breeze and you'll be up and running in no time!! Just click on the icon below!!</p>
               <Link
               to="/login"
               className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
