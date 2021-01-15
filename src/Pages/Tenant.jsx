@@ -28,6 +28,7 @@ function Tenant() {
               interdum elit pulvinar eu. Quisque vitae quam dapibus, vestibulum mauris quis, laoreet
               massa.
             </p>
+ 
           {/* </Col>
         </Row> */}
       {/* </Container> */}
