@@ -6,6 +6,7 @@ import Col from "../Components/Col";
 import styled, { keyframes } from "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
+import Card from "react-bootstrap/Card";
 
 function Home() {
   return (
