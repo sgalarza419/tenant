@@ -13,6 +13,8 @@ import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
 // import Image from "react-bootstrap/Image";
 import "../Components/FlipCardHome/style.css";
+import { Link } from "react-router-dom";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
 
@@ -37,14 +39,33 @@ function Home() {
           <div className="flip-card-inner">
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
-              <h5 style={{ marginTop: "150px" }}><FontAwesomeIcon icon={faComments} size="5x" color="white"/></h5>
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></h5>
+              <h4>Make Payments</h4>
             </div>
             <div className="flip-card-back text-white">
               <br />
               <br />
               <br />
-              <h1>Spice It Up!!</h1>
-              <p>Bored?? Having trouble coming up with something to do?? Check out the Spice It Up!! app where we randomly generate an activity for you to do based on the category you select!!</p>
+              <h1>Make Payments</h1>
+              <p>Convenient way for landlords to get paid. Rent, utilities, move-in fees and more are deposited straight into your bank account — at no cost to you.</p>
+              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front text-white">
+              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faComments} size="5x" color="white"/></h5>
+              <h4>Chat with Landlord/Tenants</h4>
+            </div>
+            <div className="flip-card-back text-white">
+              <br />
+              <br />
+              <br />
+              <h1>Chat with Landlord/Tenants</h1>
+              <p>Communication is seamless!! Landlords can keep in contact with their tenants and tenants can chat with other tenants!!</p>
               <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
             </div>
           </div>
@@ -54,32 +75,20 @@ function Home() {
           <div className="flip-card-inner">
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
-              <h5 style={{ marginTop: "150px" }}><FontAwesomeIcon icon={faHandshake} size="5x" color="white"/></h5>
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/></h5>
+              <h4>Sign Up</h4>
             </div>
             <div className="flip-card-back text-white">
               <br />
               <br />
               <br />
-              <h1>Spice It Up!!</h1>
-              <p>Bored?? Having trouble coming up with something to do?? Check out the Spice It Up!! app where we randomly generate an activity for you to do based on the category you select!!</p>
-              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faHandshake} size="5x" color="white"/></a>
-            </div>
-          </div>
-        </div>
-
-        <div className="flip-card">
-          <div className="flip-card-inner">
-            <div className="flip-card-front text-white">
-              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
-              <h5 style={{ marginTop: "150px" }}><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></h5>
-            </div>
-            <div className="flip-card-back text-white">
-              <br />
-              <br />
-              <br />
-              <h1>Spice It Up!!</h1>
-              <p>Bored?? Having trouble coming up with something to do?? Check out the Spice It Up!! app where we randomly generate an activity for you to do based on the category you select!!</p>
-              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
+              <h1>Sign Up</h1>
+              <p>Registering is a breeze!! Have your information handy and be up and running in no time!!</p>
+              <Link
+              to="/login"
+              className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
+              <FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/>
+            </Link>
             </div>
           </div>
         </div>
