@@ -11,6 +11,7 @@ import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
 import "../Components/FlipCardHome/style.css";
 
 function Home() {
+
   return (
     <div>
       <Hero backgroundImage="https://wsptldr.files.wordpress.com/2020/07/2020_07kmartapart.jpg?w=1024">
