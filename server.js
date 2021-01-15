@@ -33,6 +33,7 @@ mongoose.connect("mongodb://localhost:27017/tenant", { useNewUrlParser: true }, 
     console.log('connected to mongodb');
 });
 
+//this is a comment
 // create home route
 // app.get('/', (req, res) => {
 //     res.render('home', {user:req.user});
