@@ -30,6 +30,11 @@ function Home() {
             </div>
             <br />
             <br />
+
+            <h3 className="text-center" style={{ color: "teal", fontSize: "35px", }}>It's easier than ever to be a landlord!!</h3>
+            <br/>
+            <h4 className="text-center" style={{ color: "teal", fontSize: "20px", }}>We provide a safe and convienient place for landlords and tenants to connect and more!!</h4>
+            <br />
             <br />
           </Col>
         </Row>
