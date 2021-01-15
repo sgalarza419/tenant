@@ -10,7 +10,7 @@ function Login() {
         {/* <Row>
           <Col size="md-12"> */}
             <Jumbotron> 
-            <h1>Welcome Tenant!</h1> 
+            <h1>Sign Up using your Google Account</h1> 
             <h2>My Rental</h2>
             </Jumbotron>
             <TenantCard />

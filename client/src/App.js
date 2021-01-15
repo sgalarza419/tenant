@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Landlord from "./Pages/Landlord";
 import Tenant from "./Pages/Tenant";
+import Login from "./Pages/Login";
 import Wrapper from "./Components/Wrapper";
 
 
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path={["/tenant"]}>
             <Tenant />
+          </Route>
+          <Route exact path={["/login"]}>
+            <Login />
           </Route>
         </Wrapper>
       </div>
