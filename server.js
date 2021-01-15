@@ -9,6 +9,7 @@ const passport = require('passport');
 const routes = require('./routes');
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -43,6 +44,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tenant", ()=>{
 //     res.render('home', {user:req.user});
 // });
 
-app.listen(3000, () => {
-    console.log('app now listening for request on port 3000');
-});
+app.listen(PORT, function() {
+    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  });
