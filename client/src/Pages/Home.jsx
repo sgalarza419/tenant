@@ -3,16 +3,28 @@ import Hero from "../Components/Hero";
 import Container from "../Components/Container"
 import Row from "../Components/Row";
 import Col from "../Components/Col";
+import styled, { keyframes } from "animate.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
 
 function Home() {
   return (
     <div>
-      <Hero backgroundImage="https://wsptldr.files.wordpress.com/2020/07/2020_07kmartapart.jpg?w=1024">    
+      <Hero backgroundImage="https://wsptldr.files.wordpress.com/2020/07/2020_07kmartapart.jpg?w=1024">
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Welcome To Home!</h1>
+            <div className="animate__animated animate__bounceInDown">
+              <h1 className="text-center" style={{ color: "teal", fontSize: "100px", }}>CDMS<FontAwesomeIcon icon={faConnectdevelop} />CONNECT</h1>
+            </div>
+            <br />
+            <br />
+            <br />
+            <h2 className="text-center">What we do</h2>
+            <br />
+            <br />
+            <br />
           </Col>
         </Row>
         <Row>

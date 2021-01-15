@@ -23,13 +23,18 @@
     "url": "https://github.com/sgalarza419/tenant/issues"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "cookie-session": "^1.4.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "mongoose": "^5.11.11",
     "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0",
-    "if-env": "^1.0.4"
+    "passport-google-oauth20": "^2.0.0"
   },
   "repository": {
     "type": "git",
