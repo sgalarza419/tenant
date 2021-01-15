@@ -1,45 +1,39 @@
 {
-  "homepage": "https://sgalarza419.github.com/tenant",
   "name": "tenant",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.8",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
-  },
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "gh-pages": "^3.1.0"
-  }
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
+  "bugs": {
+    "url": "https://github.com/sgalarza419/tenant/issues"
+  },
+  "dependencies": {
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.11",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "if-env": "^1.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgalarza419/tenant.git"
+  },
+  "homepage": "https://github.com/sgalarza419/tenant#readme"
 }
