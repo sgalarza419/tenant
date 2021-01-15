@@ -29,10 +29,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //connect to mongodb
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tenant", ()=>{
+mongoose.connect("mongodb://localhost:27017/tenant", { useNewUrlParser: true }, ()=>{
     console.log('connected to mongodb');
 });
 
+//this is a comment
 // create home route
 // app.get('/', (req, res) => {
 //     res.render('home', {user:req.user});
