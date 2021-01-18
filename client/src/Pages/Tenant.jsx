@@ -9,6 +9,7 @@ function Tenant() {
       {/* <Container style={{ marginTop: 30 }}> */}
         {/* <Row>
           <Col size="md-12"> */}
+          {/* commment */}
             <Jumbotron> 
             <h1>Welcome Tenant!</h1> 
             <h2>My Rental</h2>
