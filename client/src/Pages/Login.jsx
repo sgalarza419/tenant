@@ -10,7 +10,7 @@ function Login() {
         {/* <Row>
           <Col size="md-12"> */}
             <Jumbotron> 
-            <h1>Use your Gmail account to sign up</h1> 
+            <h1 className="text-center">Use your Gmail account to sign up</h1> 
             <main style={{ 
               maxWidth: "960px",
                 margin: "30px auto",
