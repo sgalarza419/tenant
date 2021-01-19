@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Hero from "../Components/Hero"
-import Row from "../Components/Row"
-import Button from 'react-bootstrap/Button'
-import Modal from '../Components/Modal'
-import Card from 'react-bootstrap/Card'
+import Hero from "../Components/Hero";
+import Row from "../Components/Row";
+import Button from 'react-bootstrap/Button';
+import Modal from '../Components/Modal';
+import Card from 'react-bootstrap/Card';
+
 
 // Needs function to populate rental data
 
@@ -26,17 +27,23 @@ function Tenant() {
         </Row>
 
         <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+
+          <Card style={{ width: '500px', backgroundColor: "teal"}}>
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of
-                  the card's content.
+              <Card.Title style={{ textAlign: "center", color: "white"}}>Here is your current Rentals</Card.Title>
+                <Card.Text style={{ textAlign: "center", color: "white"}}>
+                  populated data goes here
                 </Card.Text>
+                <Row>
+                <Button variant="info" style={{padding: "5px"}}>Pay Bills</Button>
+                <Button variant="info" style={{padding: "5px"}}>Open Discussion</Button>
+                <Button variant="info" style={{padding: "5px"}}>Manage Rentals</Button>
+                </Row>
             </Card.Body>
           </Card>
+
         </Modal>
+
       </container>
     </div>
   );
