@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react";
 // import TenantCard from "../Components/Card/Tenant"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Container from "../Components/Container"
-<<<<<<< HEAD
-// import Card from "react-bootstrap/Card"
-=======
 import Card from "react-bootstrap/Card";
->>>>>>> 912b04fcb28bc3d3e867d70e4e416d26b379ef7c
 import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../Components/Form";
 // import { Container } from "react-bootstrap/lib/Tab";
@@ -101,30 +97,18 @@ function handleFormSubmit(event) {
               <Input
                 onChange={handleInputChange}
                 name="title"
-<<<<<<< HEAD
-                placeholder="Username"
-=======
                 placeholder="Email (required)"
->>>>>>> 912b04fcb28bc3d3e867d70e4e416d26b379ef7c
               />
               <Input
                 onChange={handleInputChange}
                 name="author"
-<<<<<<< HEAD
-                placeholder="Password"
-=======
                 placeholder="Password (required)"
->>>>>>> 912b04fcb28bc3d3e867d70e4e416d26b379ef7c
               />
               <FormBtn
                 // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-<<<<<<< HEAD
-                Login
-=======
                 Submit
->>>>>>> 912b04fcb28bc3d3e867d70e4e416d26b379ef7c
               </FormBtn>
             </form>
             </Card>
