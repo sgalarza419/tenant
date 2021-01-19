@@ -1,20 +1,25 @@
 import React from "react";
 import TenantCard from "../Components/Card/Tenant"
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import Jumbotron from "react-bootstrap/Jumbotron"
+import Row from "../Components/Row"
+// import Building from '../Components/Building'
 // import Container from "../Components/Container"
 
 function Tenant() {
   return (
     <div>
-      {/* <Container style={{ marginTop: 30 }}> */}
+      <container style={{ paddingTop: 30 }}>
         {/* <Row>
           <Col size="md-12"> */}
           {/* commment */}
-            <Jumbotron> 
-            <h1>Welcome Tenant!</h1> 
-            <h2>My Rental</h2>
+            <Jumbotron>
+              <br></br>
+            <h1 style={{textAlign:"center", color:"teal"}}>Welcome Tenant!</h1> 
             </Jumbotron>
+            <h2 style={{textAlign:"center", color:"teal"}}>Here are your Current Rentals...</h2>
+            <Row>
             <TenantCard />
+            </Row>
             <p>
               Etiam ut massa efficitur, gravida sapien non, condimentum sapien. Suspendisse massa
               tortor, facilisis in nque sit amet, scelerisque elementum tortor. Nullam eget nibh
@@ -32,7 +37,7 @@ function Tenant() {
  
           {/* </Col>
         </Row> */}
-      {/* </Container> */}
+      </container>
     </div>
   );
 }

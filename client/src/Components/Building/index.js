@@ -1,9 +1,9 @@
 import React from 'react';
-import Image from '../../assets/img/building_red'
+import './style.css';
 
 function Building() {
-    return(
-        <div><img src={Image}></img></div>
+    return (
+        <button>Image needs to go here</button>
     )
 }
 
