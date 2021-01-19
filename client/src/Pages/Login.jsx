@@ -93,7 +93,7 @@ function handleFormSubmit(event) {
             <Container className="col-md-4">
             <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px"}}>
             <form>
-              <h3 className="text-white">SignUp</h3>
+              <h3 className="text-white">Sign Up</h3>
               <Input
                 onChange={handleInputChange}
                 name="title"
@@ -109,6 +109,28 @@ function handleFormSubmit(event) {
                 onClick={handleFormSubmit}
               >
                 Submit
+              </FormBtn>
+            </form>
+            </Card>
+            <br/>
+            <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px"}}>
+            <form>
+              <h3 className="text-white">Login</h3>
+              <Input
+                onChange={handleInputChange}
+                name="title"
+                placeholder="Email (required)"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="author"
+                placeholder="Password (required)"
+              />
+              <FormBtn
+                // disabled={!(formObject.author && formObject.title)}
+                onClick={handleFormSubmit}
+              >
+                Login
               </FormBtn>
             </form>
             </Card>
