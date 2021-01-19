@@ -1,23 +1,22 @@
 const express = require('express');
 const cors = require("cors");
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const keys = require('./config/keys');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
-const keys = require('./config/keys');
 const cookieSession = require('cookie-session');
-const passport = require('passport');
 const routes = require('./routes');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const chalk = require("chalk");
+
+let user = {};
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.get("/", (req,res) => {
+app.get("/", (req, res) => {
   console.log("reached root route /");
   res.send(hello);
 })
-
-let user = {};
 
 passport.serializeUser((user, cb) => {
   cb(null, user);
@@ -31,14 +30,27 @@ passport.deserializeUser((user, cb) => {
 passport.use(new GoogleStrategy({
     clientID: keys.google.clientID,
     clientSecret: keys.google.clientSecret,
-    callbackURL: "/auth/google/callback"
+    callbackURL: "/auth/google/callback",
+    passReqToCallback: true
   },
-  (accessToken, refreshToken, profile, cb) => {
-    console.log(chalk.blue(JSON.stringify(profile)));
-    user = {
-      ...profile
-    };
-    return cb(null, profile);
+  (request, accessToken, refreshToken, profile, done) => {
+    User.findOrCreate({
+      googleId: profile.id
+    }, (err, user) => {
+      return done(err, user);
+    });
+  }
+));
+
+app.get('/auth/google',
+  passport.authenticate('google', {
+    scope: ['email', 'profile']
+  }));
+
+app.get('/auth/google/callback',
+  passport.authenticate('google', {
+    successRedirect: '/auth/google/success',
+    failureRedirect: '/auth/google/failure'
   }));
 
 // initialize passport
@@ -47,14 +59,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.get("/auth/google", passport.authenticate("google", {
-  scope: ["profile", "email"]
-}));
-app.get("/auth/google/callback",
-passport.authenticate("google"),
-(req, res) => {
-    res.redirect("/profile");
-  });
 
 app.get("/user", (req, res) => {
   console.log("getting user data!");
