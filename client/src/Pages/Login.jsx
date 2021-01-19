@@ -64,15 +64,16 @@ function handleFormSubmit(event) {
         {/* <Row>
           <Col size="md-12"> */}
           <Jumbotron style={{
+              backgroundColor: "teal",
               display:"flex",
               justifyContent:"center",
               alignItem:"center"
               }}> 
             <h1 className="text-center" style={{
               float:"left",
-              color: "teal",
+              color: "white",
               fontSize: "50px"
-              }}>Use your Gmail account to sign up Today!</h1> 
+              }}>Use your Gmail account or Email to Sign Up Today!!</h1> 
             </Jumbotron>
             <main style={{ 
                 maxWidth: "960px",
@@ -86,11 +87,13 @@ function handleFormSubmit(event) {
                 fontSize: "18px",
                 padding: "10px",
                 background: "#ff5353",
+                borderRadius: "6px"
                 }}>Gmail</a>
             </main>
             <Container className="col-md-4">
             <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px"}}>
             <form>
+              <h3 className="text-white">SignUp</h3>
               <Input
                 onChange={handleInputChange}
                 name="title"
@@ -101,11 +104,6 @@ function handleFormSubmit(event) {
                 name="author"
                 placeholder="Password (required)"
               />
-              {/* <TextArea
-                onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              /> */}
               <FormBtn
                 // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
