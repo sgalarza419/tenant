@@ -97,7 +97,7 @@ function handleFormSubmit(event) {
             <Container className="col-md-4">
             <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px"}}>
             <form>
-              <h3 className="text-white">Sign Up</h3>
+              <h3 className="text-white">Sign Up <FontAwesomeIcon icon={faUserPlus} size="1x" color="white"/></h3>
               <Input
                 onChange={handleInputChange}
                 name="title"
@@ -112,14 +112,14 @@ function handleFormSubmit(event) {
                 // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Submit
+                Submit <FontAwesomeIcon icon={faUserPlus} size="1x" color="white"/>
               </FormBtn>
             </form>
             </Card>
             <br/>
             <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px"}}>
             <form>
-              <h3 className="text-white">Login</h3>
+              <h3 className="text-white">Login <FontAwesomeIcon icon={faSignInAlt} size="1x" color="white"/></h3>
               <Input
                 onChange={handleInputChange}
                 name="title"
@@ -134,7 +134,7 @@ function handleFormSubmit(event) {
                 // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Login
+                Login <FontAwesomeIcon icon={faSignInAlt} size="1x" color="white"/>
               </FormBtn>
             </form>
             </Card>
@@ -172,7 +172,7 @@ function handleFormSubmit(event) {
                 // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Login
+                Login <FontAwesomeIcon icon={faSignInAlt} size="1x" color="white"/>
               </FormBtn>
             </form>
             </Card>
@@ -209,7 +209,7 @@ function handleFormSubmit(event) {
                 // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Submit
+                Submit <FontAwesomeIcon icon={faUserPlus} size="1x" color="white"/>
               </FormBtn>
             </form>
             </Card>
