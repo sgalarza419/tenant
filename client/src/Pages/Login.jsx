@@ -8,6 +8,10 @@ import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../Components/Form";
 // import { Container } from "react-bootstrap/lib/Tab";
 import Container from "react-bootstrap/Container";
+import Row from "../Components/Row";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
 
 function Login() {
 //Setting our component's initial state
@@ -138,6 +142,83 @@ function handleFormSubmit(event) {
           {/* </Col>
         </Row> */}
       {/* </Container> */}
+      <Container>
+        <Row>
+      <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front text-white">
+              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faSignInAlt} size="5x" color="white"/></h5>
+              <h2>Login</h2>
+            </div>
+            <div className="flip-card-back text-white">
+              <br />
+              <br />
+              <br />
+              <h1>Login <FontAwesomeIcon icon={faSignInAlt} size="1x" color="white"/></h1>
+              <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px", border: "transparent"}}>
+            <form>
+              <Input
+                onChange={handleInputChange}
+                name="title"
+                placeholder="Email (required)"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="author"
+                placeholder="Password (required)"
+              />
+              <FormBtn
+                // disabled={!(formObject.author && formObject.title)}
+                onClick={handleFormSubmit}
+              >
+                Login
+              </FormBtn>
+            </form>
+            </Card>
+              
+            </div>
+          </div>
+        </div>
+
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front text-white">
+              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/></h5>
+              <h2>Sign Up</h2>
+            </div>
+            <div className="flip-card-back text-white">
+              <br />
+              <br />
+              <br />
+              <h1>Sign Up <FontAwesomeIcon icon={faUserPlus} size="1x" color="white"/></h1>
+              <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px", border: "transparent"}}>
+            <form>
+              <Input
+                onChange={handleInputChange}
+                name="title"
+                placeholder="Email (required)"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="author"
+                placeholder="Password (required)"
+              />
+              <FormBtn
+                // disabled={!(formObject.author && formObject.title)}
+                onClick={handleFormSubmit}
+              >
+                Submit
+              </FormBtn>
+            </form>
+            </Card>
+              
+            </div>
+          </div>
+        </div>
+        </Row>
+        </Container>
     </div>
   );
 }
