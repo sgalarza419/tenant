@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import DeleteBtn from "../Components/DeleteBtn";
-import TenantCard from "../Components/Card/Tenant"
+// import DeleteBtn from "../Components/DeleteBtn";
+// import TenantCard from "../Components/Card/Tenant"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Container from "../Components/Container"
-import Card from "react-bootstrap/Card"
+// import Card from "react-bootstrap/Card"
 import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../Components/Form";
 
@@ -78,7 +78,7 @@ function handleFormSubmit(event) {
                 padding: "0 10px",
                 color: "#333",
                 textAlign: "center"}}>
-            <a class="google-btn" href="/auth/google" style={{
+            <a className="google-btn" href="/auth/google" style={{
                 color: "#fff",
                 textDecoration: "none",
                 fontSize: "18px",
@@ -90,23 +90,18 @@ function handleFormSubmit(event) {
               <Input
                 onChange={handleInputChange}
                 name="title"
-                placeholder="Title (required)"
+                placeholder="Username"
               />
               <Input
                 onChange={handleInputChange}
                 name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                placeholder="Password"
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Submit Book
+                Login
               </FormBtn>
             </form>
           {/* </Col>
