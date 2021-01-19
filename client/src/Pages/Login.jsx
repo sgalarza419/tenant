@@ -12,6 +12,7 @@ import Row from "../Components/Row";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 function Login() {
 //Setting our component's initial state
@@ -176,8 +177,7 @@ function handleFormSubmit(event) {
               </FormBtn>
             </form>
             </Card>
-              
-            </div>
+              </div>
           </div>
         </div>
 
@@ -213,10 +213,40 @@ function handleFormSubmit(event) {
               </FormBtn>
             </form>
             </Card>
-              
-            </div>
+              </div>
           </div>
         </div>
+        
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front text-white">
+              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faGoogle} size="5x" color="white"/></h5>
+            </div>
+            <div className="flip-card-back text-white">
+              <br />
+              <br />
+              <br />
+              <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "30px 50px 0px 50px", border: "transparent"}}>
+              <main style={{ 
+                maxWidth: "960px",
+                padding: "0 10px",
+                color: "#333",
+                textAlign: "center"}}>
+            <a className="google-btn" href="/auth/google" style={{
+                color: "#fff",
+                textDecoration: "none",
+                fontSize: "50px",
+                padding: "10px",
+                background: "#ff5353",
+                borderRadius: "6px"
+                }}>Gmail</a>
+            </main>
+            </Card>
+              </div>
+          </div>
+        </div>
+
         </Row>
         </Container>
     </div>
