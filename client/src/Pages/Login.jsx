@@ -65,9 +65,6 @@ function handleFormSubmit(event) {
 
   return (
     <div>
-      {/* <Container style={{ marginTop: 30 }}> */}
-        {/* <Row>
-          <Col size="md-12"> */}
           <Jumbotron style={{
               backgroundColor: "teal",
               display:"flex",
@@ -80,7 +77,7 @@ function handleFormSubmit(event) {
               fontSize: "50px"
               }}>Use your Gmail account or Email to Sign Up Today!!</h1> 
             </Jumbotron>
-            <main style={{ 
+            {/* <main style={{ 
                 maxWidth: "960px",
                 margin: "30px auto",
                 padding: "0 10px",
@@ -139,10 +136,7 @@ function handleFormSubmit(event) {
               </FormBtn>
             </form>
             </Card>
-            </Container>
-          {/* </Col>
-        </Row> */}
-      {/* </Container> */}
+            </Container> */}
       <Container>
         <Row>
       <div className="flip-card">
