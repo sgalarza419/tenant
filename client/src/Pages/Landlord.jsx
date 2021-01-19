@@ -3,51 +3,88 @@ import Hero from "../Components/Hero";
 import Container from "../Components/Container"
 import Row from "../Components/Row";
 import Col from "../Components/Col";
-// import styled, { keyframes } from "animate.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
+import "../Components/FlipCardHome/style.css";
+import styled, { keyframes } from "animate.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
+import { faComments } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+// import { faConnectdevelop } from "@import { Link } from "react-router-dom";fortawesome/free-brands-svg-icons";
 
 function Landlord() {
   return (
     <div>
-       <Hero backgroundImage="https://static1.squarespace.com/static/58fa0759ebbd1a8dd14ebdf8/t/5cf58d68e15d7f0001b003f1/1559596404951/Landlord-bloglead.gif?format=1500w">
+      <Hero backgroundImage="https://static1.squarespace.com/static/58fa0759ebbd1a8dd14ebdf8/t/5cf58d68e15d7f0001b003f1/1559596404951/Landlord-bloglead.gif?format=1500w">
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1 className="text-center" style={{color: "teal", fontSize: "100px", }}>Welcome To Landlord!</h1>
+            <h1 className="text-center" style={{ color: "teal", fontSize: "100px", }}>Welcome to the Landlord page!</h1>
+            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >Down below are a few cards too explain it all! Pay rent, commiuncate with me and even direct message others around the complex !</p>
           </Col>
         </Row>
+        </Container>
         <Row>
-          <Col size="md-12">
-            <p>
-             IT FINALLY WORKS !!!!!!!
-            </p>
-            <p>
-              Phasellus at rutrum nisl. Praesent sed massa ut ipsum bibendum porttitor. Sed
-              malesuada molestie velit ac viverra. Quisque a ullamcorper purus. Curabitur luctus mi
-              ac mi hendrerit semper. Nulla tincidunt accumsan lobortis. Mauris convallis sapien non
-              nibh porta accumsan. Nunc volutpat tempus porttitor. Nunc congue dictum egestas.
-              Aliquam blandit mi eu urna scelerisque, vitae volutpat ligula ultricies. Maecenas vel
-              porta augue. Fusce mauris ex, dignissim et lacinia ut, tempus eget nibh.
-            </p>
-            <p>
-              Etiam ut massa efficitur, gravida sapien non, condimentum sapien. Suspendisse massa
-              tortor, facilisis in neque sit amet, scelerisque elementum tortor. Nullam eget nibh
-              sit amet odio lobortis ullamcorper. Nulla bibendum magna nec sem pulvinar lobortis.
-              Mauris et imperdiet urna, vitae lobortis dui. Nunc elementum elit mi, non mattis enim
-              congue at. Proin mi lectus, ullamcorper id hendrerit eu, ultricies vitae lacus. Nunc
-              vehicula, erat eget laoreet condimentum, felis ante malesuada leo, nec efficitur diam
-              nisi eget nisi. Cras arcu lacus, tristique in bibendum vitae, elementum eget lorem.
-              Maecenas vestibulum volutpat orci eu pharetra. Praesent vel blandit ante, nec faucibus
-              libero. Sed ultrices lorem ex, eu facilisis libero convallis ac. Vivamus id dapibus
-              eros. Nullam tempor sem rhoncus porta semper. Proin bibendum vulputate nisl, fringilla
-              interdum elit pulvinar eu. Quisque vitae quam dapibus, vestibulum mauris quis, laoreet
-              massa.
-            </p>
-          </Col>
+          <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front text-white">
+              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></h5>
+              <h4>Make Payments</h4>
+            </div>
+            <div className="flip-card-back text-white">
+              <br />
+              <br />
+              <br />
+              <h1>Make Payments</h1>
+              <p>Link here is too pay rent when due. Make it nice an simple for all!</p>
+              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front text-white">
+              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faComments} size="5x" color="white"/></h5>
+              <h4>Talk with me Directly !!</h4>
+            </div>
+            <div className="flip-card-back text-white">
+              <br />
+              <br />
+              <br />
+              <h1>Talk with me Directly !!</h1>
+              <p>If there are any issues you can send me a message at any time and I will respond ASAP</p>
+              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div className="flip-card">
+          <div className="flip-card-inner">
+            <div className="flip-card-front text-white">
+              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
+              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/></h5>
+              <h4>Sign Up</h4>
+            </div>
+            <div className="flip-card-back text-white">
+              <br />
+              <br />
+              <br />
+              <h1>Sign Up</h1>
+              <p>Registering is a breeze and you'll be up and running in no time!! Just click on the icon below!!</p>
+              <Link
+              to="/login"
+              className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
+              <FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/>
+            </Link>
+            </div>
+          </div>
+        </div>
         </Row>
-      </Container>
+      
     </div>
   );
 }
