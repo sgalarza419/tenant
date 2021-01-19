@@ -3,9 +3,15 @@ import React, { useState, useEffect } from "react";
 // import TenantCard from "../Components/Card/Tenant"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Container from "../Components/Container"
+<<<<<<< HEAD
 // import Card from "react-bootstrap/Card"
+=======
+import Card from "react-bootstrap/Card";
+>>>>>>> 912b04fcb28bc3d3e867d70e4e416d26b379ef7c
 import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../Components/Form";
+// import { Container } from "react-bootstrap/lib/Tab";
+import Container from "react-bootstrap/Container";
 
 function Login() {
 //Setting our component's initial state
@@ -62,15 +68,16 @@ function handleFormSubmit(event) {
         {/* <Row>
           <Col size="md-12"> */}
           <Jumbotron style={{
+              backgroundColor: "teal",
               display:"flex",
               justifyContent:"center",
               alignItem:"center"
               }}> 
             <h1 className="text-center" style={{
               float:"left",
-              color: "teal",
+              color: "white",
               fontSize: "50px"
-              }}>Use your Gmail account to sign up Today!</h1> 
+              }}>Use your Gmail account or Email to Sign Up Today!!</h1> 
             </Jumbotron>
             <main style={{ 
                 maxWidth: "960px",
@@ -84,26 +91,44 @@ function handleFormSubmit(event) {
                 fontSize: "18px",
                 padding: "10px",
                 background: "#ff5353",
+                borderRadius: "6px"
                 }}>Gmail</a>
             </main>
+            <Container className="col-md-4">
+            <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px"}}>
             <form>
+              <h3 className="text-white">SignUp</h3>
               <Input
                 onChange={handleInputChange}
                 name="title"
+<<<<<<< HEAD
                 placeholder="Username"
+=======
+                placeholder="Email (required)"
+>>>>>>> 912b04fcb28bc3d3e867d70e4e416d26b379ef7c
               />
               <Input
                 onChange={handleInputChange}
                 name="author"
+<<<<<<< HEAD
                 placeholder="Password"
+=======
+                placeholder="Password (required)"
+>>>>>>> 912b04fcb28bc3d3e867d70e4e416d26b379ef7c
               />
               <FormBtn
-                disabled={!(formObject.author && formObject.title)}
+                // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
+<<<<<<< HEAD
                 Login
+=======
+                Submit
+>>>>>>> 912b04fcb28bc3d3e867d70e4e416d26b379ef7c
               </FormBtn>
             </form>
+            </Card>
+            </Container>
           {/* </Col>
         </Row> */}
       {/* </Container> */}
