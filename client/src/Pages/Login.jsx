@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import DeleteBtn from "../Components/DeleteBtn";
-import TenantCard from "../Components/Card/Tenant"
+// import DeleteBtn from "../Components/DeleteBtn";
+// import TenantCard from "../Components/Card/Tenant"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Container from "../Components/Container"
 import Card from "react-bootstrap/Card";
@@ -83,7 +83,7 @@ function handleFormSubmit(event) {
                 padding: "0 10px",
                 color: "#333",
                 textAlign: "center"}}>
-            <a class="google-btn" href="/auth/google" style={{
+            <a className="google-btn" href="/auth/google" style={{
                 color: "#fff",
                 textDecoration: "none",
                 fontSize: "18px",

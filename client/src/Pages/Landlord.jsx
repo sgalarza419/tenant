@@ -5,7 +5,7 @@ import Container from "../Components/Container"
 import Row from "../Components/Row";
 import Col from "../Components/Col";
 import "../Components/FlipCardHome/style.css";
-import styled, { keyframes } from "animate.css";
+// import styled, { keyframes } from "animate.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
@@ -93,7 +93,7 @@ function Landlord() {
               <br />
               <h1>Make Payments</h1>
               <p>Link here is too pay rent when due. Make it nice an simple for all!</p>
-              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
+              <a rel="alternate, noreferrer" target="_blank" href="/landlord"><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ function Landlord() {
               <br />
               <h1>Talk with me Directly !!</h1>
               <p>If there are any issues you can send me a message at any time and I will respond ASAP</p>
-              <a rel="alternate, noreferrer" target="_blank" href=""><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
+              <a rel="alternate, noreferrer" target="_blank" href="/landlord"><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
