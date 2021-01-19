@@ -1,8 +1,12 @@
 import React from "react";
 
-export default class Modal extends React.Component {
-    render() {
-      return <div>Hello Modal</div>;
-    }
-  }
-  
+export default function Modal({ open, children, onClose}) {
+  if (!open) return null
+
+  return (
+    <div>
+      {children}
+      <button onClick={onClose}>Close</button>
+    </div>
+  )
+}
