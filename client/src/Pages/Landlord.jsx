@@ -1,4 +1,5 @@
 import React from "react";
+// import React, { Component } from 'react'
 import Hero from "../Components/Hero";
 import Container from "../Components/Container"
 import Row from "../Components/Row";
@@ -10,7 +11,59 @@ import { faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import Button from "react-bootstrap/Button";
+import render from "react";
+// import ReactDOM from "react"
+import Modal from 'react-bootstrap/Modal'
+import "bootstrap/dist/css/bootstrap.min.css";
 // import { faConnectdevelop } from "@import { Link } from "react-router-dom";fortawesome/free-brands-svg-icons";
+
+// function MyVerticallyCenteredModal(props) {
+//   return (
+//     <Modal
+//       {...props}
+//       size="lg"
+//       aria-labelledby="contained-modal-title-vcenter"
+//       centered
+//     >
+//       <Modal.Header closeButton>
+//         <Modal.Title id="contained-modal-title-vcenter">
+//           Modal heading
+//         </Modal.Title>
+//       </Modal.Header>
+//       <Modal.Body>
+//         <h4>Centered Modal</h4>
+//         <p>
+//           Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+//           dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+//           consectetur ac, vestibulum at eros.
+//         </p>
+//       </Modal.Body>
+//       <Modal.Footer>
+//         <Button onClick={props.onHide}>Close</Button>
+//       </Modal.Footer>
+//     </Modal>
+//   );
+// }
+
+// function App() {
+//   const [modalShow, setModalShow] = React.useState(false);
+
+//   return (
+//     <>
+//       <Button variant="primary" onClick={() => setModalShow(true)}>
+//         Launch vertically centered modal
+//       </Button>
+
+//       <MyVerticallyCenteredModal
+//         show={modalShow}
+//         onHide={() => setModalShow(false)}
+//       />
+//     </>
+//   );
+// }
+
+// render(<App />);
 
 function Landlord() {
   return (
@@ -21,7 +74,8 @@ function Landlord() {
         <Row>
           <Col size="md-12">
             <h1 className="text-center" style={{ color: "teal", fontSize: "100px", }}>Welcome to the Landlord page!</h1>
-            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >Down below are a few cards too explain it all! Pay rent, commiuncate with me and even direct message others around the complex !</p>
+            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >Down below are a few cards too explain it all! Pay rent, communicate with me and even direct message others around the complex !</p>
+            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >All you have too do is add me to a room where we can communicate any problem or issue that is going on. There will also be a link to where you can send payments. </p>
           </Col>
         </Row>
         </Container>
@@ -31,7 +85,7 @@ function Landlord() {
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
               <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></h5>
-              <h4>Make Payments</h4>
+              <h4>Pay Here</h4>
             </div>
             <div className="flip-card-back text-white">
               <br />
@@ -49,7 +103,7 @@ function Landlord() {
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
               <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faComments} size="5x" color="white"/></h5>
-              <h4>Talk with me Directly !!</h4>
+              <h4>Message Me</h4>
             </div>
             <div className="flip-card-back text-white">
               <br />
@@ -61,28 +115,11 @@ function Landlord() {
             </div>
           </div>
         </div>
+        
 
-        <div className="flip-card">
-          <div className="flip-card-inner">
-            <div className="flip-card-front text-white">
-              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
-              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/></h5>
-              <h4>Sign Up</h4>
-            </div>
-            <div className="flip-card-back text-white">
-              <br />
-              <br />
-              <br />
-              <h1>Sign Up</h1>
-              <p>Registering is a breeze and you'll be up and running in no time!! Just click on the icon below!!</p>
-              <Link
-              to="/login"
-              className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
-              <FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/>
-            </Link>
-            </div>
-          </div>
-        </div>
+       
+          
+   
         </Row>
       
     </div>
