@@ -3,9 +3,11 @@ import DeleteBtn from "../Components/DeleteBtn";
 import TenantCard from "../Components/Card/Tenant"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Container from "../Components/Container"
-import Card from "react-bootstrap/Card"
+import Card from "react-bootstrap/Card";
 import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../Components/Form";
+// import { Container } from "react-bootstrap/lib/Tab";
+import Container from "react-bootstrap/Container";
 
 function Login() {
 //Setting our component's initial state
@@ -86,29 +88,33 @@ function handleFormSubmit(event) {
                 background: "#ff5353",
                 }}>Gmail</a>
             </main>
+            <Container className="col-md-4">
+            <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px"}}>
             <form>
               <Input
                 onChange={handleInputChange}
                 name="title"
-                placeholder="Title (required)"
+                placeholder="Email (required)"
               />
               <Input
                 onChange={handleInputChange}
                 name="author"
-                placeholder="Author (required)"
+                placeholder="Password (required)"
               />
-              <TextArea
+              {/* <TextArea
                 onChange={handleInputChange}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
-              />
+              /> */}
               <FormBtn
-                disabled={!(formObject.author && formObject.title)}
+                // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Submit Book
+                Submit
               </FormBtn>
             </form>
+            </Card>
+            </Container>
           {/* </Col>
         </Row> */}
       {/* </Container> */}
