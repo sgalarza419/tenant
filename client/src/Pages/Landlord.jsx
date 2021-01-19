@@ -21,7 +21,8 @@ function Landlord() {
         <Row>
           <Col size="md-12">
             <h1 className="text-center" style={{ color: "teal", fontSize: "100px", }}>Welcome to the Landlord page!</h1>
-            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >Down below are a few cards too explain it all! Pay rent, commiuncate with me and even direct message others around the complex !</p>
+            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >Down below are a few cards too explain it all! Pay rent, communicate with me and even direct message others around the complex !</p>
+            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >All you have too do is add me to a room where we can communicate any problem or issue that is going on. There will also be a link to where you can send payments. </p>
           </Col>
         </Row>
         </Container>
@@ -62,27 +63,9 @@ function Landlord() {
           </div>
         </div>
 
-        <div className="flip-card">
-          <div className="flip-card-inner">
-            <div className="flip-card-front text-white">
-              {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
-              <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/></h5>
-              <h4>Sign Up</h4>
-            </div>
-            <div className="flip-card-back text-white">
-              <br />
-              <br />
-              <br />
-              <h1>Sign Up</h1>
-              <p>Registering is a breeze and you'll be up and running in no time!! Just click on the icon below!!</p>
-              <Link
-              to="/login"
-              className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
-              <FontAwesomeIcon icon={faUserPlus} size="5x" color="white"/>
-            </Link>
-            </div>
-          </div>
-        </div>
+       
+          
+   
         </Row>
       
     </div>
