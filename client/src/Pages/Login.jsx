@@ -88,8 +88,8 @@ function handleFormSubmit(event) {
                 background: "#ff5353",
                 }}>Gmail</a>
             </main>
-            <Container className="justify-content-center">
-            <Card>
+            <Container className="col-md-4">
+            <Card style={{ backgroundColor: "teal", fontSize: "100px", padding: "50px 50px 0px 50px"}}>
             <form>
               <Input
                 onChange={handleInputChange}
@@ -107,7 +107,7 @@ function handleFormSubmit(event) {
                 placeholder="Synopsis (Optional)"
               /> */}
               <FormBtn
-                disabled={!(formObject.author && formObject.title)}
+                // disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
                 Submit
