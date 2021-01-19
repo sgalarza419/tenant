@@ -1,29 +1,114 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import DeleteBtn from "../Components/DeleteBtn";
 import TenantCard from "../Components/Card/Tenant"
 import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Container from "../Components/Container"
+import Card from "react-bootstrap/Card"
+import API from "../utils/API";
+import { Input, TextArea, FormBtn } from "../Components/Form";
 
 function Login() {
+//Setting our component's initial state
+const [users, setUsers] = useState([])
+const [formObject, setFormObject] = useState({})
+
+//Load all users and store them with setUsers
+useEffect(() => {
+  loadUsers()
+}, [])
+
+//Loads all users and sets them to users
+function loadUsers() {
+  API.getUsers()
+  .then(res =>
+    setUsers(res.data))
+    .catch(err => console.log(err));
+}
+
+//Deletes a user from the database with a give id, then reloads books from the db
+function deleteUser(id) {
+  API.deleteUser(id)
+  .then(res => loadUsers())
+  .catch(err => console.log(err));
+}
+
+//Handles updating compnent state when the user types into the input field
+function handleInputChange(event) {
+  const {address, value} = event.target;
+  setFormObject({...formObject, [address]: value})
+}
+
+// When the form is submitted, use the API.
+// saveUser method to save the user data
+// Then reload users from the database
+function handleFormSubmit(event) {
+  event.preventDefault();
+  if(formObject.username && formObject.googleId) {
+    API.saveUser({
+      address: String,
+      room: String,
+      resident: Boolean,
+      landlord: Boolean
+    })
+    .then(res => loadUsers())
+    .catch(err => console.log(err));
+  }
+};
+
+
   return (
     <div>
       {/* <Container style={{ marginTop: 30 }}> */}
         {/* <Row>
           <Col size="md-12"> */}
-            <Jumbotron> 
-            <h1>Use your Gmail account to sign up</h1> 
+          <Jumbotron style={{
+              display:"flex",
+              justifyContent:"center",
+              alignItem:"center"
+              }}> 
+            <h1 className="text-center" style={{
+              float:"left",
+              color: "teal",
+              fontSize: "50px"
+              }}>Use your Gmail account to sign up Today!</h1> 
+            </Jumbotron>
             <main style={{ 
-              maxWidth: "960px",
+                maxWidth: "960px",
                 margin: "30px auto",
                 padding: "0 10px",
-                color: "#333" }}>
+                color: "#333",
+                textAlign: "center"}}>
             <a class="google-btn" href="/auth/google" style={{
                 color: "#fff",
                 textDecoration: "none",
                 fontSize: "18px",
                 padding: "10px",
-                background: "#ff5353" }}>Gmail</a>
+                background: "#ff5353",
+                }}>Gmail</a>
             </main>
-            </Jumbotron>
+            <form>
+              <Input
+                onChange={handleInputChange}
+                name="title"
+                placeholder="Title (required)"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="author"
+                placeholder="Author (required)"
+              />
+              <TextArea
+                onChange={handleInputChange}
+                name="synopsis"
+                placeholder="Synopsis (Optional)"
+              />
+              <FormBtn
+                disabled={!(formObject.author && formObject.title)}
+                onClick={handleFormSubmit}
+              >
+                Submit Book
+              </FormBtn>
+            </form>
           {/* </Col>
         </Row> */}
       {/* </Container> */}
