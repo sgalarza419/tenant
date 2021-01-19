@@ -32,7 +32,7 @@ function Landlord() {
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
               <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></h5>
-              <h4>Make Payments</h4>
+              <h4>Pay Here</h4>
             </div>
             <div className="flip-card-back text-white">
               <br />
@@ -50,7 +50,7 @@ function Landlord() {
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
               <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faComments} size="5x" color="white"/></h5>
-              <h4>Talk with me Directly !!</h4>
+              <h4>Message Me</h4>
             </div>
             <div className="flip-card-back text-white">
               <br />
