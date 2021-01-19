@@ -1,7 +1,6 @@
 import React from 'react';
-import Button from '../../Button';
-import Card from 'react-bootstrap/Card'
-import Container from '../../Container'
+import Card from 'react-bootstrap/Card';
+import Container from '../../Container';
 
 function TenantCard() {
     return (
@@ -14,7 +13,6 @@ function TenantCard() {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Button>Go somewhere</Button>
                 </Card.Body>
             </Card>
         </Container>
