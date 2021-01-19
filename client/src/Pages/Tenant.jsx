@@ -1,21 +1,28 @@
 import React from "react";
-// import TenantCard from "../Components/Card/Tenant"
-import Jumbotron from "react-bootstrap/Jumbotron"
+import Hero from "../Components/Hero"
 import Row from "../Components/Row"
-import BuildingRed from '../Components/BuildingRed'
-// import Container from "../Components/Container"
+import Button from 'react-bootstrap/Button'
+
+
+// function to return the modal for rental
+const handleClick = () => {
+  console.log('Hello')
+}
+// Needs function to populate rental data
 
 function Tenant() {
   return (
     <div>
       <container style={{ paddingTop:"30px" }}>
-        <Jumbotron style={{backgroundImage: "https://media.istockphoto.com/photos/estate-agent-giving-house-keys-to-woman-and-sign-agreement-in-office-picture-id1130829500?k=6&m=1130829500&s=612x612&w=0&h=MHR5K8GvILOjSKOLKdgPeav1DPpQPqEbxEr1FTrEpiU=", backgroundSize: "cover"}}>
-          <br></br>
-          <h1 style={{ textAlign: "center", color: "teal" }}>Welcome Tenant!</h1>
-        </Jumbotron>
+        <Hero backgroundImage="images/TenantHero.jpg">
+        </Hero>
+        <h1 style={{fontSize:"100px", textAlign: "center", color: "teal" }}>Welcome Tenant!</h1>
+        <h4 style={{textAlign: "center", color: "teal"}}>Message Landlords, Pay Bills, and Rent SMARTER with Tenant.</h4>
+        <br></br>
         <h2 style={{ textAlign: "center", color: "teal" }}>Here are your Current Rentals...</h2>
         <Row>
-          <BuildingRed />
+          {/* Button should return a modal with rental data */}
+          <Button variant="info" onClick={handleClick}>Click Here!</Button>
         </Row>
       </container>
     </div>
