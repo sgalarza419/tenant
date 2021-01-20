@@ -4,7 +4,8 @@ import Container from "../Components/Container";
 // import Container from "react-bootstrap/Container";
 import Row from "../Components/Row";
 import Col from "react-bootstrap/Col";
-// import styled, { keyframes } from "animate.css";
+// Line 8 is neccessary to get animation on text at page load
+import styled, { keyframes } from "animate.css"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop } from "@fortawesome/free-brands-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
@@ -54,9 +55,6 @@ function Home() {
               <br />
               <h1>Make Payments</h1>
               <p>Convenient way for landlords to get paid. Rent, utilities, move-in fees and more are deposited straight into your bank account — at no cost to you.</p>
-
-              <a rel="alternate, noreferrer" target="_blank" href="/home"><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
-
               <FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/>
             </div>
           </div>
