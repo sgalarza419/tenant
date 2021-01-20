@@ -2,8 +2,14 @@ const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 const userRoutes = require("./user");
+const authRoutes = require("./auth");
 
 // userAuth Routes
+router.use("/auth", authRoutes,()=>{
+  console.log("i have routed auth: " ,authRoutes);
+  });
+  
+// user Routes
 router.use("/user", userRoutes,()=>{
 console.log("i have routed userAuth: " ,userRoutes);
 });

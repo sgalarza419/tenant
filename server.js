@@ -42,12 +42,10 @@ app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Add routes, both API and view
-app.use(function(req,res) {
-  console.log("HERE I AM");
-  console.log("URL: ",req.url);
-})
-app.use(routes);
+// app.use(function(req,res) {
+//   console.log("HERE I AM");
+//   console.log("URL: ",req.url);
+// })
 
 // Define middleware here
 app.use(express.urlencoded({
@@ -63,6 +61,9 @@ app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
   keys: [keys.session.cookieKey]
 }));
+
+// Add routes, both API and view
+app.use(routes);
 
 //connect to mongodb
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tenant", {
