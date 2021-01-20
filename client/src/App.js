@@ -7,6 +7,7 @@ import Tenant from "./Pages/Tenant";
 import Login from "./Pages/Login";
 import Wrapper from "./Components/Wrapper";
 import history from "./history";
+import { CometChat } from "@cometchat-pro/chat"
 // import UserProvider from "./Context/UserProvider"
 
 
