@@ -16,6 +16,7 @@ import "../Components/FlipCardHome/style.css";
 import { Link } from "react-router-dom";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
+
 function Home() {
 
   return (
