@@ -42,16 +42,11 @@ passport.use(new GoogleStrategy({
   }
 ));
 
-app.get('/auth/google',
-  passport.authenticate('google', {
-    scope: ['email', 'profile']
-  }));
-
-app.get('/auth/google/callback',
-  passport.authenticate('google', {
-    successRedirect: '/auth/google/success',
-    failureRedirect: '/auth/google/failure'
-  }));
+// app.get('/auth/google/callback',
+//   passport.authenticate('google', {
+//     successRedirect: '/auth/google/success',
+//     failureRedirect: '/auth/google/failure'
+//   }));
 
 // initialize passport
 app.use(cors());
@@ -63,12 +58,6 @@ app.use(passport.session());
 app.get("/user", (req, res) => {
   console.log("getting user data!");
   res.send(user);
-});
-
-app.get("/auth/logout", (req, res) => {
-  console.log("logging out!");
-  user = {};
-  res.redirect("/");
 });
 
 // Define middleware here
