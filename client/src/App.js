@@ -5,6 +5,8 @@ import Home from "./Pages/Home";
 import Landlord from "./Pages/Landlord";
 import Tenant from "./Pages/Tenant";
 import Login from "./Pages/Login";
+import Payment from "./Pages/Payment";
+import Chat from "./Pages/Chat"
 import Wrapper from "./Components/Wrapper";
 
 
@@ -27,6 +29,12 @@ function App() {
           </Route>
           <Route exact path={["/login"]}>
             <Login />
+          </Route>
+          <Route exact path={["/payment"]}>
+            <Payment />
+          </Route>
+          <Route exact path={["/chat"]}>
+            <Chat />
           </Route>
 
         </Wrapper>

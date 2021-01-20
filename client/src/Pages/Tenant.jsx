@@ -4,6 +4,7 @@ import Row from "../Components/Row";
 import Button from 'react-bootstrap/Button';
 import Modal from '../Components/Modal';
 import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 
 
 // Needs function to populate rental data
@@ -35,9 +36,9 @@ function Tenant() {
                   populated data goes here
                 </Card.Text>
                 <Row>
-                <Button variant="info" style={{padding: "5px"}}>Pay Bills</Button>
-                <Button variant="info" style={{padding: "5px"}}>Open Discussion</Button>
-                <Button variant="info" style={{padding: "5px"}}>Manage Rentals</Button>
+                <Button variant="info" href="/payment">Pay Bills</Button>
+                <Button variant="info" href="/chat">Open Discussion</Button>
+                <Button variant="info">Manage Rentals</Button>
                 </Row>
             </Card.Body>
           </Card>
