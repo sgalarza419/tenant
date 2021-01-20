@@ -54,7 +54,7 @@ function Home() {
               <h1>Make Payments</h1>
               <p>Convenient way for landlords to get paid. Rent, utilities, move-in fees and more are deposited straight into your bank account — at no cost to you.</p>
 
-              <a rel="alternate, noreferrer" target="_blank" href="/home"><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
+              <a rel="alternate, noreferrer" target="_blank" href="/payment"><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
 
               <FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/>
             </div>
@@ -74,7 +74,7 @@ function Home() {
               <br />
               <h1>Chat with Landlord/Tenants</h1>
               <p>Communication is seamless!! Landlords can keep in contact with their tenants and tenants can chat with other tenants!!</p>
-              <FontAwesomeIcon icon={faComments} size="5x" color="white"/>
+              <a rel="alternate, noreferrer" target="_blank" href="/chat"><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
