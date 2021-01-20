@@ -4,7 +4,7 @@ const apiRoutes = require("./api");
 const userRoutes = require("./user");
 
 // userAuth Routes
-router.use("/api/user", userRoutes,()=>{
+router.use("/user", userRoutes,()=>{
 console.log("i have routed userAuth: " ,userRoutes);
 });
 
@@ -15,6 +15,7 @@ router.use("/api", apiRoutes,()=>{
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
+  console.log("no API routes are hit");
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 

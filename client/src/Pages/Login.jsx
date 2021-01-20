@@ -227,7 +227,7 @@ function handleFormSubmit(event) {
                 padding: "0 10px",
                 color: "#333",
                 textAlign: "center"}}>
-            <a className="google-btn" href="/auth/google/" style={{
+            <a className="google-btn" href="/user/profile" style={{
                 color: "#fff",
                 textDecoration: "none",
                 fontSize: "50px",
