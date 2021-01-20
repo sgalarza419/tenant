@@ -5,7 +5,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Container from "../Components/Container"
 import Card from "react-bootstrap/Card";
 import API from "../utils/API";
-import { Input, TextArea, FormBtn } from "../Components/Form";
+import { Input, FormBtn } from "../Components/Form";
 // import { Container } from "react-bootstrap/lib/Tab";
 import Container from "react-bootstrap/Container";
 import Row from "../Components/Row";
@@ -227,7 +227,7 @@ function handleFormSubmit(event) {
                 padding: "0 10px",
                 color: "#333",
                 textAlign: "center"}}>
-            <a className="google-btn" href="/auth/google/callback" style={{
+            <a className="google-btn" href="/auth/google/" style={{
                 color: "#fff",
                 textDecoration: "none",
                 fontSize: "50px",

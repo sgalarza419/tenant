@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require("cors");
 const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const GoogleStrategy = require('passport-google-oauth20').OAuth2Strategy;
 const keys = require('./config/keys');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
@@ -30,7 +30,7 @@ passport.deserializeUser((user, cb) => {
 passport.use(new GoogleStrategy({
     clientID: keys.google.clientID,
     clientSecret: keys.google.clientSecret,
-    callbackURL: "/auth/google/callback",
+    callbackURL: "http://localhost:3000/auth/google/callback",
     passReqToCallback: true
   },
   (request, accessToken, refreshToken, profile, done) => {
@@ -42,18 +42,13 @@ passport.use(new GoogleStrategy({
   }
 ));
 
-// app.get('/auth/google/callback',
-//   passport.authenticate('google', {
-//     successRedirect: '/auth/google/success',
-//     failureRedirect: '/auth/google/failure'
-//   }));
-
 // initialize passport
 app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+// Add routes, both API and view
+app.use(routes);
 
 app.get("/user", (req, res) => {
   console.log("getting user data!");
@@ -69,8 +64,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
-app.use(routes);
 
 app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
