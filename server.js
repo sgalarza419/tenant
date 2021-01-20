@@ -1,22 +1,18 @@
 const express = require('express');
 const cors = require("cors");
-const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
+var passport = require('passport');
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const keys = require('./config/keys');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const routes = require('./routes');
+const { User } = require('./models');
 
 let user = {};
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-app.get("/", (req, res) => {
-  console.log("reached root route /");
-  res.send(hello);
-})
 
 passport.serializeUser((user, cb) => {
   cb(null, user);
@@ -28,37 +24,28 @@ passport.deserializeUser((user, cb) => {
 
 // Google Strategy
 passport.use(new GoogleStrategy({
-    clientID: keys.google.clientID,
-    clientSecret: keys.google.clientSecret,
-    callbackURL: "/auth/google/callback",
-    passReqToCallback: true
-  },
-  (request, accessToken, refreshToken, profile, done) => {
-    User.findOrCreate({
-      googleId: profile.id
-    }, (err, user) => {
-      return done(err, user);
-    });
-  }
+  clientID: keys.google.clientID,
+  clientSecret: keys.google.clientSecret,
+  callbackURL: "http://localhost:3000/auth/google/callback"
+},
+(accessToken, refreshToken, profile, done) => {
+  console.log("GoogleStrategy profile: ", profile);
+  User.findOrCreate({googleId:profile.id}, (err,user)=>{
+    console.log("user: ", user);
+    return done(err,user);
+  });
+}
 ));
-
-// app.get('/auth/google/callback',
-//   passport.authenticate('google', {
-//     successRedirect: '/auth/google/success',
-//     failureRedirect: '/auth/google/failure'
-//   }));
 
 // initialize passport
 app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-
-app.get("/user", (req, res) => {
-  console.log("getting user data!");
-  res.send(user);
-});
+// app.use(function(req,res) {
+//   console.log("HERE I AM");
+//   console.log("URL: ",req.url);
+// })
 
 // Define middleware here
 app.use(express.urlencoded({
@@ -69,13 +56,14 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
-app.use(routes);
 
 app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
   keys: [keys.session.cookieKey]
 }));
+
+// Add routes, both API and view
+app.use(routes);
 
 //connect to mongodb
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tenant", {

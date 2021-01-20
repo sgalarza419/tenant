@@ -2,9 +2,15 @@ const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 const userRoutes = require("./user");
+const authRoutes = require("./auth");
 
 // userAuth Routes
-router.use("/api/user", userRoutes,()=>{
+router.use("/auth", authRoutes,()=>{
+  console.log("i have routed auth: " ,authRoutes);
+  });
+  
+// user Routes
+router.use("/user", userRoutes,()=>{
 console.log("i have routed userAuth: " ,userRoutes);
 });
 
@@ -15,6 +21,7 @@ router.use("/api", apiRoutes,()=>{
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
+  console.log("no API routes are hit");
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 

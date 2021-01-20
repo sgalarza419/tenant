@@ -5,7 +5,7 @@ export default {
     getUsers: function () {
         return axios.get("/api/users");
     },
-    // Gets the book with the given id
+    // Gets the users with the given id
     getUser: function (address) {
         return axios.get("/api/users/" + address);
     },

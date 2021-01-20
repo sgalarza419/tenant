@@ -9,12 +9,12 @@ import "../Components/FlipCardHome/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import Button from "react-bootstrap/Button";
-import render from "react";
+// import { Link } from "react-router-dom";
+// import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+// import Button from "react-bootstrap/Button";
+// import render from "react";
 // import ReactDOM from "react"
-import Modal from 'react-bootstrap/Modal'
+// import Modal from 'react-bootstrap/Modal'
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { faConnectdevelop } from "@import { Link } from "react-router-dom";fortawesome/free-brands-svg-icons";
 

@@ -8,14 +8,12 @@ import Login from "./Pages/Login";
 import Payment from "./Pages/Payment";
 import Chat from "./Pages/Chat"
 import Wrapper from "./Components/Wrapper";
-import history from "./history";
 
-// import UserProvider from "./Context/UserProvider"
 
 
 function App() {
   return (
-    <Router history={history}>
+    <Router>
       <div style={{backgroundImage: `url("https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg")`}}>
         <Navbar />
         <Wrapper>
