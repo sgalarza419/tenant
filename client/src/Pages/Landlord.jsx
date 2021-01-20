@@ -74,8 +74,8 @@ function Landlord() {
         <Row>
           <Col size="md-12">
             <h1 className="text-center" style={{ color: "teal", fontSize: "100px", }}>Welcome to the Landlord page!</h1>
-            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >Down below are a few cards too explain it all! Pay rent, communicate with me and even direct message others around the complex !</p>
-            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >All you have too do is add me to a room where we can communicate any problem or issue that is going on. There will also be a link to where you can send payments. </p>
+            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >
+              Message Tenants, Request payment, and manage properties SMARTER with Tenant.</p>
           </Col>
         </Row>
         </Container>
@@ -85,7 +85,7 @@ function Landlord() {
             <div className="flip-card-front text-white">
               {/* <Image src={Img5} alt="Avatar" style={{ width: "400px", height: "400px", marginTop: "40px" }} fluid/> */}
               <h5 style={{ marginTop: "140px" }}><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></h5>
-              <h4>Pay Here</h4>
+              <h4>Request Payment here</h4>
             </div>
             <div className="flip-card-back text-white">
               <br />
@@ -93,7 +93,7 @@ function Landlord() {
               <br />
               <h1>Make Payments</h1>
               <p>Link here is too pay rent when due. Make it nice an simple for all!</p>
-              <a rel="alternate, noreferrer" target="_blank" href="/landlord"><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
+              <a rel="alternate, noreferrer" target="_blank" href="/payment"><FontAwesomeIcon icon={faMoneyBillWave} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
@@ -109,9 +109,9 @@ function Landlord() {
               <br />
               <br />
               <br />
-              <h1>Talk with me Directly !!</h1>
+              <h1>Open a Discussion</h1>
               <p>If there are any issues you can send me a message at any time and I will respond ASAP</p>
-              <a rel="alternate, noreferrer" target="_blank" href="/landlord"><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
+              <a rel="alternate, noreferrer" target="_blank" href="/chat"><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
