@@ -43,8 +43,13 @@
     "passport-google-oauth20": "^2.0.0",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
+<<<<<<< HEAD
+    "react-payment-inputs": "^1.1.7",
+    "react-router-dom": "^5.2.0"
+=======
     "react-router-dom": "^5.2.0",
     "socket.io-client": "^3.1.0"
+>>>>>>> eed65df219f9c561fce0de5e9e73beeddc4611a0
   },
   "repository": {
     "type": "git",

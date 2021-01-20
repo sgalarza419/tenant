@@ -73,7 +73,7 @@ function Home() {
               <br />
               <h1>Chat with Landlord/Tenants</h1>
               <p>Communication is seamless!! Landlords can keep in contact with their tenants and tenants can chat with other tenants!!</p>
-              <FontAwesomeIcon icon={faComments} size="5x" color="white"/>
+              <a rel="alternate, noreferrer" target="_blank" href="/chat"><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
             </div>
           </div>
         </div>
