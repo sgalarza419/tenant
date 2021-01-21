@@ -71,11 +71,17 @@ Please check out the following link to see the finished product:
 
 ## ScreenShots
 
-:
-![]()
+Home Page:
+![Home Page](client\public\images\HomePage.png)
 
-:
-![]()
+Landlord Page:
+![Landlord Page](client\public\images\LandlordPage.png)
+
+Tenant Page:
+![Tenant Page](client\public\images\TenantPage.png)
+
+Login Page:
+![Login Page](client\public\images\LoginPage.png)
 
 ## Collaborators
 Check Out Our Github Pages:
