@@ -12,7 +12,10 @@ import Wrapper from "./Components/Wrapper";
 
 
 function App() {
+ 
+
   return (
+    
     <Router>
       <div style={{backgroundImage: `url("https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg")`}}>
         <Navbar />
@@ -37,7 +40,19 @@ function App() {
             <Chat />
           </Route>
 
+
+
+
+
+
+
+
+
         </Wrapper>
+
+
+
+
       </div>
     </Router>
 
