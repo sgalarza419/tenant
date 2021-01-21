@@ -95,7 +95,7 @@ function Tenant() {
                 </Card.Text>
               <Row>
                 <Button variant="info" href="/payment">Pay Bills</Button>
-                <Button variant="info" href="/chat">Open Discussion</Button>
+                <Button variant="info" href="https://chatmesseg.herokuapp.com/">Open Discussion</Button>
                 <Button variant="info">Manage Rentals</Button>
               </Row>
             </Card.Body>
