@@ -81,7 +81,7 @@ app.use(cookieSession({
 app.use(routes);
 
 //connect to mongodb
-mongoose.connect( keys.mongodb.dbURI || "mongodb://localhost/tenant", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tenant", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, () => {
