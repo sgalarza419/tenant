@@ -68,13 +68,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Landlord() {
   return (
     <div>
-      <Hero backgroundImage="https://static1.squarespace.com/static/58fa0759ebbd1a8dd14ebdf8/t/5cf58d68e15d7f0001b003f1/1559596404951/Landlord-bloglead.gif?format=1500w">
+      <Hero backgroundImage="images/landlord-tenant.jpg">
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1 className="text-center" style={{ color: "teal", fontSize: "100px", }}>Welcome to the Landlord page!</h1>
-            <p className="text-center" style={{ color: "black", fontSize: "30px", }} >
+            <h1 className="text-center" style={{ color: "teal", fontSize: "100px", }}>Welcome Landlords</h1>
+            <p className="text-center" style={{ color: "teal", fontSize: "30px", }} >
               Message Tenants, Request payment, and manage properties SMARTER with Tenant.</p>
           </Col>
         </Row>
