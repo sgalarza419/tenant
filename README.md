@@ -2,7 +2,7 @@
 
 ## Description
 
-
+For our final project we chose to make an application that would simplify communication between landlords and their tenants. Our app allows both landlords and tenants to create separate logins and to communicate via a chat/instant messenger. It also allows for tenants to communicate with other tenants within the same property. Tenants are also able to make payments thru our site, which the landlords can transfer directly through to their bank accounts. 
 
 ## User Story
 
