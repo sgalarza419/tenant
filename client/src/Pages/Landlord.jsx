@@ -111,7 +111,7 @@ function Landlord() {
               <br />
               <h1>Open a Discussion</h1>
               <p>If there are any issues you can send me a message at any time and I will respond ASAP</p>
-              <a rel="alternate, noreferrer" target="_blank" href="/chat"><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
+              <a rel="alternate, noreferrer" target="_blank" href="https://chatmesseg.herokuapp.com/"><FontAwesomeIcon icon={faComments} size="5x" color="white"/></a>
             </div>
           </div>
         </div>

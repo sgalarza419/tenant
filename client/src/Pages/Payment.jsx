@@ -1,5 +1,5 @@
 import React from 'react';
-import Row from 'react-bootstrap/row';
+import Row from 'react-bootstrap/Row';
 import Container from '../Components/Container';
 import Col from '../Components/Col';
 import Button from 'react-bootstrap/Button';
