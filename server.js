@@ -3,13 +3,10 @@ const cors = require("cors");
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const keys = require('./config/keys');
-const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const routes = require('./routes');
-const { User } = require('./models');
-
-let user = {};
+const User = require('./models');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,19 +20,37 @@ passport.deserializeUser((user, cb) => {
 });
 
 // Google Strategy
-passport.use(new GoogleStrategy({
-  clientID: keys.google.clientID,
-  clientSecret: keys.google.clientSecret,
-  callbackURL: "http://localhost:3000/auth/google/callback"
-},
-(accessToken, refreshToken, profile, done) => {
-  console.log("GoogleStrategy profile: ", profile);
-  User.findOrCreate({googleId:profile.id}, (err,user)=>{
-    console.log("user: ", user);
-    return done(err,user);
-  });
-}
-));
+passport.use(
+  new GoogleStrategy({
+    //option for the google strat
+    clientID: keys.google.clientID,
+    clientSecret: keys.google.clientSecret,
+    callbackURL: "http://localhost:3000/auth/google/callback"
+  }, (accessToken, refreshToken, profile, done) => {
+    //passport callback function
+    // check if user already exists in our db
+    User.findOne({
+      googleId: profile.id
+    }).then((currentUser) => {
+      if (currentUser) {
+        //already have the user
+        console.log('user is: ', currentUser);
+        done(null, currentUser);
+      } else {
+        // if not, create user in our db
+        new User({
+          username: profile.displayName,
+          googleId: profile.id,
+          thumbnail: profile._json.picture
+        }).save().then((newUser) => {
+          console.log('new user created: ' + newUser);
+          done(null, newUser);
+        });
+      }
+    })
+
+  })
+)
 
 // initialize passport
 app.use(cors());
@@ -67,7 +82,8 @@ app.use(routes);
 
 //connect to mongodb
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tenant", {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 }, () => {
   console.log('connected to mongodb')
 });

@@ -5,22 +5,20 @@ const router = require('express').Router();
 // endpoints: /auth/google
 router.use('/google',
     passport.authenticate('google', {
-        scope: ['profile',
-                'email'
-        ]
+        scope: ['profile']
     }));
 
 // callback route for google to redirect to
 // endpoints: /auth/google/callback
 router.use('/google/callback', 
-    //     passport.authenticate('google', {
-    //     successRedirect: '/home',
-    //     failureRedirect: '/login'
-    // }),
+        passport.authenticate('google', {
+        successRedirect: '/home',
+        failureRedirect: '/login'
+    }),
     (req, res) => {
         console.log("/google/callback")
         // res.send(req.user);
-        res.redirect('/home')
+        res.redirect('/home/')
     });
 
 module.exports = router;
